@@ -1,0 +1,26 @@
+<html>
+    <body style="background-color:rgb(80, 215, 230);">  
+    <div style="text-align:center;">
+    <h1></h1>
+    <h1>Thank you for Contacting me!</h1>
+    <h3>Your submission has been received.</h3>
+    <h3>I will reply you as soon as possible</h3>
+    <span id="timer"></span>
+</div>
+<script type="text/javascript">
+    var count = 7;
+    var redirect = "index.html";
+    function countDown() {
+        var timer = document.getElementById("timer");
+        if (count > 0) {
+            count--;
+            timer.innerHTML = "This page will redirect in " + count + " seconds.";
+            setTimeout("countDown()", 1000);
+        } else {
+            window.location.href = redirect;
+        }
+    }
+    countDown();
+</script>
+</body>
+</html>
